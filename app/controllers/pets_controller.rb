@@ -31,8 +31,6 @@ class PetsController < ApplicationController
   end
 
   patch "/pets/:id" do
-    puts params
-
     @pet = Pet.find(params[:id])
     @pet.update(params[:pet])
     
